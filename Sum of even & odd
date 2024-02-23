@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int sumEven=0;
+		int sumOdd=0;
+		int digits=0;
+
+		while(n>0){
+			digits=n%10;
+			if(digits%2==0){
+				sumEven=sumEven+digits;
+				n=n/10;
+			}
+			else{
+				sumOdd=sumOdd+digits;
+				n=n/10;
+			}
+		}
+		System.out.print(sumEven+" "+sumOdd);
+
+	}
+}
