@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Solution {
+	public static long reverseBits(long n) {
+		// Write your code here
+		
+		long result=0;
+		for(int i=0;i<32;i++){
+			result<<=1;
+
+			if((n&1)==1){
+				result++;
+			}
+			n>>=1;
+		}
+		return result;
+	}
+	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int no_of_tickets=sc.nextInt();
+
+		for(int i=0;i<no_of_tickets;i++){
+			long ticket=sc.nextLong();
+			System.out.println(reverseBits(ticket));
+		}
+	}
+}
