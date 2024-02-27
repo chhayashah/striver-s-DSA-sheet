@@ -1,0 +1,23 @@
+public class Solution {
+    public static int calcGCD(int n, int m){
+        // Write your code here.
+        if(n==0){
+            return m;
+        }
+        int temp=calcGCD(m%n,n);
+        return temp;
+
+
+        //  // Write your code here.
+        // if (n==0) {
+        //     return m;
+        // }
+        // if (m==0) {
+        //     return n;
+        // }
+        // if (n > m) {
+        //     return calcGCD(n%m, m);
+        // }
+        // return calcGCD(m%n, n);
+    }
+}
