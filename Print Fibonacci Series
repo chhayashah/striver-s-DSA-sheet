@@ -1,0 +1,26 @@
+public class Solution {
+    public static int[] generateFibonacciNumbers(int n) {
+        // Write your code here.
+         int[] fibNumbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            fibNumbers[i] = fib(i);
+        }
+        return fibNumbers;
+
+        // int[]fibNumber=new int[n];
+        // for(int i=0;i<n;i++){
+        //     fibNumber=fib(i);
+        // }
+        // return fibNumber;
+    }
+    public static int fib(int n){
+        if(n==0){
+            return 0;
+        }
+        if(n==1){
+            return 1;
+        }
+      
+        return fib(n-1)+fib(n-2);
+    }
+}
