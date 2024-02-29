@@ -1,0 +1,15 @@
+public class Solution {
+    public static long sumFirstN(long n) {
+        // Write your code here.
+        return sum((int)n);
+    }
+    public static int sum(int n){
+        if(n==1){
+            return 1;
+        }
+        // int temp=sum(n-1);
+        // return temp+n;
+
+        return n+sum(n-1);
+    }
+}
