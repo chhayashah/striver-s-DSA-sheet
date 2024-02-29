@@ -1,0 +1,23 @@
+import java.util.List;
+import java.util.ArrayList;
+public class Solution {
+    static List<Long>list=new ArrayList<Long>();
+    public static List<Long> factorialNumbers(long n) {
+        // Write Your Code Here
+        long i=1;
+        while(fact(i)<=n){
+            list.add(fact(i));
+            i++;
+        }
+        return list;
+    }
+
+    public static long fact(long n){
+        if(n==0 || n==1){
+            return 1;
+        }
+
+        // int temp=fact(n-1);
+        return fact(n-1)*n;
+    }
+}
