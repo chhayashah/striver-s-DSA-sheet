@@ -1,0 +1,15 @@
+public class Solution {
+    public static int[] printNos(int x) {
+        // Write Your Code Here
+        int[] ans=new int[x];
+    return printNo(ans,x);
+    }
+    public static int[] printNo(int[]ans,int x){
+        if(x==0){
+            return ans;
+        }
+
+        ans[x-1]=x;
+        return printNo(ans,x-1);
+    }
+}
