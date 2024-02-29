@@ -1,0 +1,18 @@
+import java.util.List;
+import java.util.ArrayList;
+public class Solution {
+    static List<String>al=new ArrayList<>();
+    public static List<String> printNtimes(int n){
+        // Write your code here.
+        if(n==0){
+            return al;
+        }
+        else{
+            al.add("Coding Ninjas");
+        }
+        printNtimes(n-1);
+        return al;
+        
+    }
+   
+}
