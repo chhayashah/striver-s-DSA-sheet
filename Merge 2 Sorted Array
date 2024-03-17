@@ -1,0 +1,24 @@
+import java.util.*;
+public class Solution {
+    public static List< Integer > sortedArray(int []a, int []b) {
+        // Write your code here
+        ArrayList<Integer>list=new ArrayList<>();
+       int n=a.length,m=b.length;
+       TreeSet<Integer>set=new TreeSet<>();
+       int i=0,j=0;
+       while(i<n || j<m){
+           if(i<n){
+               set.add(a[i]);
+               i++;
+           }
+           if(j<m){
+               set.add(b[j]);
+               j++;
+           }
+       }
+       list.addAll(set);
+       return list;
+
+       
+    }
+}
