@@ -1,0 +1,21 @@
+public class Solution {
+    public static int subarrayWithMaxProduct(int []arr){
+        // Write your code here.
+        
+        int n=arr.length;
+        
+        int max=0;
+        for(int s=0;s<=n-1;s++){
+            int ans=1;
+            for(int e=s;e<=n-1;e++){
+               ans=ans*arr[e];
+                
+                if(ans>max){
+                    max=ans;
+                }
+            }
+            
+        }
+        return max;
+    }
+}
